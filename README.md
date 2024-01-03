@@ -30,3 +30,13 @@ children processes. This argument should be passed through a command line argume
 creation fails. The parent process should also wait for all children processes to finish and
 then exit.
 3. Each child process should print out a hello message together its PID and then exit.
+4. Test with 2, 4, and 8 children processes.
+5. Next, instead of creating multiple children processes of a parent process, you are asked to
+create a chain of processes, i.e., the parent process will create one child and wait for it to
+finish, while the child creates its own child and wait for it as well, and so on. The last
+child created should print out the message and exit immediately so that its ancestors can
+finish too. Test your program with 2, 4, and 8 children processes again.
+6. Develop a Makefile, similar to the one we discuss in lecture to automate the compilation
+process.
+7. Develop a shell script to automate the test process, i.e., to test with 2, 4, and 8 children
+processes for both versions of program automatically with this script.
