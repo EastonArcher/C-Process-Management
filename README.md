@@ -15,9 +15,18 @@ message to this file.
 3. Run the modified greeting.sh script on the HPCC server and report the result.
 
 Part 2. System Programming and Process Management (in C programming language)
+
 You are asked to develop basic system programming including process creation and termination
 on a Linux platform in this part of programming project. You are asked to create multiple
 children processes to work under one parent process. In theory, children processes can do their
 own work separately or cooperatively to accomplish a task. In this assignment, these children
 processes simply print out a “hello” message together with their PIDs (process IDs) and exit.
 You should use fork() and wait() system calls to implement this program.
+
+Requirements:
+1. Take the number of children processes as an argument when the parent process creates
+children processes. This argument should be passed through a command line argument.
+2. The parent process creates children processes and should print out an error message if
+creation fails. The parent process should also wait for all children processes to finish and
+then exit.
+3. Each child process should print out a hello message together its PID and then exit.
